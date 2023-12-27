@@ -1,0 +1,89 @@
+/*----------------------------------------*/
+/*  20. Contact
+/*----------------------------------------*/
+
+.tp-contact-info {
+    display: flex;
+    &-icon {
+        min-width: 60px;
+        @media #{$md,$xs} {
+            min-width: 35px;
+        }
+        & i {
+            font-size: 42px;
+            color: $theme-color;
+            line-height: 1;
+            transform: translateY(4px);
+            @media #{$md,$xs} {
+                font-size: 24px;
+            }
+        }
+    }
+    &-text {
+        & p,
+        & a {
+            font-size: 16px;
+            color: $body-text-color-grey;
+            line-height: 27px;
+            display: block;
+            margin-bottom: 0px;
+            @media #{$md,$xs} {
+                & br {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+.tp-contact-info-title {
+    font-size: 24px;
+    color: $heading-color-black;
+}
+
+.tp-contact-form-field {
+    & input,
+    & select,
+    & textarea {
+        color: #7f8080;
+        font-size: 16px;
+        display: block;
+        width: 100%;
+        height: 70px;
+        background: $white;
+        font-weight: 400;
+        border: 1px solid #dfe0e5;
+        outline: none;
+        padding: 0px 20px;
+        width: 100%;
+        border-radius: 4px;
+        &::-moz-placeholder,
+        &::placeholder {
+            color: #7f8080;
+            font-weight: 400;
+            font-size: 16px;
+            opacity: 1;
+        }
+    }
+    & textarea {
+        height: 200px;
+        padding: 20px;
+    }
+    &.select-field-arrow::after {
+        color: #7f8080;
+    }
+}
+.tp-contact-area {
+    & h2 {
+        @media #{$xs} {
+            & br {
+                display: none;
+            }
+        }
+    }
+}
+.tp-contact-map {
+    & iframe {
+        width: 100%;
+        height: 600px;
+    }
+}

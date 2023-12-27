@@ -1,0 +1,441 @@
+/*----------------------------------------*/
+/*  04. Cta
+/*----------------------------------------*/
+.tp-appoint {
+    margin-bottom: 15px;
+    & input,
+    & select {
+        color: $body-text-color;
+        font-size: 15px;
+        display: block;
+        width: 100%;
+        height: 70px;
+        background: $white;
+        font-weight: 400;
+        border: 1px solid transparent;
+        outline: none;
+        padding: 0px 25px;
+        width: 100%;
+    }
+    & select {
+        padding-left: 20px;
+    }
+    & button {
+        height: 70px;
+        line-height: 70px;
+        width: 100%;
+        @media #{$xl} {
+            padding: 0px 25px;
+        }
+    }
+}
+.tp-appoint-three {
+    & input,
+    & select {
+        color: $body-text-color-grey3;
+    }
+}
+.tp-appoint {
+    & input::-moz-placeholder {
+        color: $body-text-color;
+        font-size: 15px;
+        font-weight: 400;
+    }
+    & input::placeholder {
+        color: $body-text-color;
+        font-size: 15px;
+        font-weight: 400;
+    }
+    &.tp-appoint-three {
+        & input::-moz-placeholder,
+        & input::placeholder {
+            color: $body-text-color-grey3;
+        }
+    }
+}
+.tp-appoint-title {
+    margin-bottom: 0px;
+    font-size: 27px;
+    line-height: 1.33;
+}
+.select-field-arrow {
+    position: relative;
+    &:after {
+        position: absolute;
+        content: '\f078';
+        top: 50%;
+        transform: translateY(-50%);
+        right: 28px;
+        font-size: 13px;
+        color: $body-text-color;
+        font-family: "Font Awesome 5 Pro";
+        z-index: 2;
+    }
+}
+.tp-appoint-three.select-field-arrow {
+    &:after {
+        color: $body-text-color-grey3;
+    }
+}
+// cta home two start here
+.tp-cta-area-two-bg {
+    max-width: 1390px;
+    margin: 0 auto;
+    padding: 50px 50px 20px 50px;
+    background: $grey-bg-light;
+    position: relative;
+    margin-top: -130px;
+    z-index: 8;
+    @media #{$lg,$md,$xs} {
+        padding: 30px;
+        padding-bottom: 0px;
+    }
+}
+.tp-cta-two-icon {
+    height: 80px;
+    line-height: 94px;
+    width: 80px;
+    background: $theme-yellow;
+    border-radius: 50%;
+    border: 5px solid $white;
+    float: left;
+    margin-right: 25px;
+    text-align: center;
+    @include transition(0.3s);
+    @media #{$xl} {
+        margin-right: 15px;
+    }
+    @media #{$lg,$md,$xs} {
+        float: inherit;
+        margin-right: 0px;
+        margin-bottom: 25px;
+    }
+    & i {
+        font-size: 36px;
+        color: $heading-color-black;
+        @include transition(0.3s);
+    }
+}
+.tp-cta-two-text-title {
+	font-size: 24px;
+	margin-bottom: 15px;
+	color: #ffffff;
+	line-height: 1;
+    @include transition(0.3s);
+    @media #{$md,$xs} {
+        font-size: 20px;
+    }
+}
+.tp-cta-two {
+    padding: 60px 30px 50px 30px;
+    background: $theme-color;
+    border-radius: 4px;
+    @include transition(0.3s);
+    @media #{$xl} {
+        padding: 50px 25px 40px 25px;
+    }
+    @media #{$lg,$md,$xs} {
+        padding: 30px 30px 20px 30px;
+    }
+    @media #{$md,$xs} {
+        padding: 30px 20px 20px 20px;
+    }
+    & p {
+        color: $white;
+        margin-bottom: 0px;
+        @include transition(0.3s);
+    }
+    &:hover {
+        background: $theme-yellow;
+        & p {
+            color: $heading-color-black;
+        }
+        & h4 {
+            color: $heading-color-black;
+        }
+        & .tp-cta-two-icon {
+            background: $theme-color;
+            & i {
+                color: $white;
+                transform: rotateY(360deg);
+            }
+        }
+    }
+}
+
+// contact cta start here
+.tp-contact-cta-area {
+    margin-bottom: -60px;
+}
+.tp-contact-cta-bg {
+    background: $theme-color;
+    padding: 0px 80px;
+    border-radius: 10px;
+    @media #{$lg} {
+        padding: 0px 20px;
+    }
+    @media #{$md} {
+        padding: 30px 30px 0px 30px;
+    }
+    @media #{$xs} {
+        padding: 30px 20px 0px 20px;
+    }
+}
+.tp-contact-cta {
+    padding: 40px 0px;
+    @media #{$md,$xs} {
+        padding: 0px;
+        padding-bottom: 30px;
+    }
+    &.border-r-1,
+    &.border-r-2 {
+        position: relative;
+        &:before {
+            position: absolute;
+            content: '';
+            top: 0px;
+            right: 0px;
+            height: 100%;
+            width: 1px;
+            background: #20215f;
+            @media #{$lg} {
+                right: -18px;
+            }
+            @media #{$md,$xs} {
+                display: none;
+            }
+        }
+    }
+    &.border-r-2:before {
+        right: -35px;
+        @media #{$lg} {
+            right: -18px;
+        }
+    }
+    &-inner {
+        display: inline-flex;
+        align-items: center;
+        width: 100%;
+        @media #{$md,$xs} {
+            justify-content: start !important;
+        }
+        &-icon {
+            height: 70px;
+            width: 70px;
+            text-align: center;
+            line-height: 86px;
+            background: $white;
+            color: $theme-blue;
+            margin-right: 25px;
+            border-radius: 50%;
+            @media #{$lg,$xs} {
+                margin-right: 10px;
+            }
+            @media #{$xs} {
+                height: 60px;
+                width: 60px;
+                line-height: 76px;
+            }
+            & i {
+                font-size: 32px;
+            }
+        }
+        &-text {
+            & span {
+                font-size: 16px;
+                color: $white;
+                display: block;
+                margin-bottom: 10px;
+            }
+            & h5,
+            & h5 a {
+                font-size: 20px;
+                font-weight: 500;
+                margin-bottom: 0px;
+                color: $white;
+                @media #{$xs} {
+                    font-size: 18px;
+                }
+                @media #{$sm} {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+
+//newsletter area three start here
+.tp-newsletter-area-three-bg {
+    padding: 60px 0px 65px 0px;
+    border-radius: 5px;
+    margin-top: -110px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @media #{$lg,$md} {
+        padding: 60px 60px 65px 60px;
+    }
+    @media #{$xs} {
+        padding: 40px 30px 45px 30px;
+    }
+}
+.tp-newsletter-area-three-text {
+    [type="radio"]:checked,
+    [type="radio"]:not(:checked) {
+        position: absolute;
+        left: -9999px;
+    }
+    [type="radio"]:checked + label,
+    [type="radio"]:not(:checked) + label
+    {
+        position: relative;
+        padding-left: 28px;
+        cursor: pointer;
+        line-height: 20px;
+        display: inline-block;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 500;
+        @media #{$xs} {
+            font-size: 16px;
+        }
+    }
+    [type="radio"]:checked + label:before,
+    [type="radio"]:not(:checked) + label:before {
+        content: '';
+        position: absolute;
+        left: 1px;
+        top: 1px;
+        width: 18px;
+        height: 18px;
+        border: 2px solid #fff;
+        border-radius: 100%;
+        background: transparent;
+    }
+    [type="radio"]:checked + label:after,
+    [type="radio"]:not(:checked) + label:after {
+        content: '';
+        width: 8px;
+        height: 8px;
+        background: #fff;
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        border-radius: 100%;
+        -webkit-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+    }
+    [type="radio"]:not(:checked) + label:after {
+        opacity: 0;
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    [type="radio"]:checked + label:after {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+.tp-newsletter-radio {
+	display: inline-block;
+}
+.tp-newsletter-area-three {
+    & form {
+        position: relative;
+        & input {
+            height: 80px;
+            width: 100%;
+            background: $white;
+            font-size: 16px;
+            color: $body-text-color-grey3;
+            border: none;
+            outline: none;
+            padding-left: 165px;
+            padding-right: 190px;
+            &::-moz-placeholder {
+                color: $white;
+            }
+            &::placeholder {
+                color: $white;
+            }
+            @media #{$xs} {
+                padding: 0px 15px;
+                height: 60px;
+                &::-moz-placeholder {
+                    color: $body-text-color-grey3;
+                }
+                &::placeholder {
+                    color: $body-text-color-grey3;
+                }
+            }
+        }
+        & span {
+            font-size: 16px;
+            color: $body-text-color-grey3;
+            display: inline-block;
+            position: absolute;
+            left: 20px;
+            padding-right: 15px;
+            border-right: 1px solid $body-text-color-grey3;
+            top: 50%;
+            transform: translateY(-50%);
+            @media #{$xs} {
+                display: none;
+            }
+            & i {
+                margin-right: 3px;
+            }
+        }
+        & button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            @media #{$xs} {
+                position: relative;
+                margin-top: 15px;
+                top: inherit;
+                right: inherit;
+            }
+        }
+    }
+}
+.tp-newsletter-area-three-title {
+    font-size: 42px;
+    color: $white;
+    @media #{$lg,$md,$xs} {
+        margin-bottom: 10px;
+    }
+    @media #{$xs} {
+       font-size: 32px;
+    }
+}
+.tp-newsletter-area-three-text {
+    @media #{$lg,$md,$xs} {
+        margin-bottom: 25px;
+    }
+}
+
+//appoin page contact start here
+.tp-appoint-contact-area {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.tp-appoint-contact {
+    margin-left: 35px;
+    @media #{$xs} {
+        margin-left: 0px;
+    }
+    & .tp-testimonial-two-form-wrapper {
+        background: $theme-color;
+    }
+    & button:hover {
+        background: $theme-dark-color;
+    }
+}
+
+.appoint_bg{
+    background: url(../img/appoint/appoint-bg.jpg);
+    background-repeat: no-repeat;
+}

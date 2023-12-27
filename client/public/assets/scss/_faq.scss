@@ -1,0 +1,189 @@
+/*----------------------------------------*/
+/*  17. Faq
+/*----------------------------------------*/
+
+.tp-faq-text {
+    margin-top: -10px;
+    & .accordion-item:first-of-type .accordion-button {
+        border-radius: 0px;
+    }
+    & .accordion-button:not(.collapsed) {
+        color: $heading-color-black;
+        font-weight: 800;
+        background: none;
+    }
+    & .accordion-button {
+        border: 0px;
+        padding-top: 28px;
+        padding-bottom: 28px;
+        font-size: 20px;
+        font-weight: 800;
+        color: $heading-color-black;
+        @media #{$xs} {
+            padding: 20px 5px;
+            font-size: 18px;
+        }
+        @media #{$sm} {
+            font-size: 20px;
+        }
+    }
+    & .accordion-button:focus {
+        box-shadow: none;
+    }
+    & .accordion-item {
+        margin-bottom: 20px;
+        border: none;
+        padding: 0px 10px;
+        background: $white;
+        box-shadow: 0px 0px 18.8px 1.2px rgba(30, 33, 62, 0.08);
+    }
+    & .accordion-collapse {
+        border: none;
+    }
+    & .accordion-body {
+        padding-top: 0px;
+        padding-bottom: 23px;
+        font-size: 16px;
+        color: $body-text-color-grey;
+        @media #{$xs} {
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+    }
+    & .accordion-button::after {
+        content: '\f067';
+        font-family: "Font Awesome 5 Pro";
+        background: none;
+        transform: none;
+        margin-right: -5px;
+        font-size: 18px;
+    }
+    & .accordion-button:not(.collapsed)::after {
+        content: '\f068';
+        font-family: "Font Awesome 5 Pro";
+        color: $theme-color;
+    }
+}
+.tp-faq-img {
+    & img {
+        max-width: inherit;
+        margin-left: -140px;
+        margin-top: -45px;
+        @media #{$lg} {
+            margin-left: -250px;
+        }
+        @media #{$md} {
+            max-width: 100%;
+            margin-left: 0px;
+        }
+        @media #{$xs} {
+            max-width: 100%;
+            margin-left: 0px;
+        }
+    }
+}
+.tp-about-faq-img {
+    & img {
+        margin-left: -60px;
+        max-width: inherit;
+        @media #{$xl} {
+            margin-left: -105px;
+        }
+        @media #{$lg} {
+            margin-left: 0px;
+            margin-bottom: 120px;
+            max-width: 100%;
+        }
+        @media #{$md,$xs} {
+            margin-left: 0px;
+            max-width: 100%;
+        }
+    }
+}
+.tp-faq-text.pt-120 {
+    @media #{$md,$xs} {
+        padding-top: 60px;
+    }
+}
+
+
+// faq page start here
+.tp-faqs-left-sidebar {
+    padding: 35px 25px 25px 25px;
+    border: 2px solid rgb(236, 239, 240);
+    & ul {
+        & li {
+            list-style: none;
+            padding: 27px 0px 27px 0px;
+            border-bottom: 1px solid #dadddf;
+            &:last-child {
+                border-bottom: 0px;
+                padding-bottom: 7px;
+            }
+            & a {
+                font-size: 18px;
+                line-height: 1;
+                color: $body-text-color-grey;
+                display: inline-block;
+                &:hover {
+                    color: $theme-color;
+                }
+            }
+        }
+    }
+}
+.tp-faqs-left-sidebar-title {
+    font-size: 24px;
+    color: $heading-color-black;
+    line-height: 1;
+    position: relative;
+    padding-left: 15px;
+    &::before {
+        position: absolute;
+        content: '';
+        height: 100%;
+        width: 4px;
+        display: inline-block;
+        top: 0px;
+        left: 0px;
+        background: $theme-color;
+    }
+}
+.tp-faqs-right .accordion-button:not(.collapsed)::after {
+	content: "\f068";
+	font-family: "Font Awesome 5 Pro";
+	color: $white;
+	height: 45px;
+	width: 45px;
+	text-align: center;
+	line-height: 45px;
+	background: $theme-color;
+    font-weight: 300;
+    box-shadow: 0px 10px 30px 0px rgba(32, 33, 95, 0.5);
+    @media #{$md,$xs} {
+        height: 30px;
+        width: 30px;
+        line-height: 30px;
+    }
+}
+.tp-faqs-right .accordion-button::after {
+	font-weight: 300;
+}
+.tp-faqs-right .accordion-button.collapsed {
+    padding-bottom: 28px;
+    @media #{$xs} {
+        padding-bottom: 20px;
+    }
+}
+.tp-faqs-right .accordion-button {
+    padding-bottom: 18px;
+}
+.tp-contact-form-title {
+    font-size: 36px;
+    color: $heading-color-black;
+}
+.accordion-button:not(.collapsed) {
+    box-shadow: none;
+}
+
+

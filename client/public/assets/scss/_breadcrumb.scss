@@ -1,0 +1,99 @@
+/*----------------------------------------*/
+/*  19. Breadcrumb
+/*----------------------------------------*/
+.tp-page-title-area {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.tp-page-title-img {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    & img {
+        min-height: 100%;
+	    object-fit: cover;
+    }
+}
+.breadcrumb-title {
+    color: $heading-color-black;
+    font-size: 90px;
+    line-height: 1;
+    margin-bottom: 20px;
+    @media #{$lg} {
+        font-size: 60px;
+    }
+    @media #{$md} {
+        font-size: 52px;
+    }
+    @media #{$xs} {
+        font-size: 38px;
+    }
+    @media #{$sm} {
+        font-size: 46px;
+    }
+    & span {
+        color: $theme-color;
+    }
+}
+.breadcrumb-trail {
+    line-height: 1;
+    padding-left: 100px;
+    position: relative;
+    @media #{$xs} {
+        padding-left: 45px;
+    }
+    &::before {
+        position: absolute;
+        content: '';
+        height: 2px;
+        width: 80px;
+        top: 11px;
+        left: 0px;
+        background: $theme-color;
+        @media #{$xs} {
+            width: 35px;
+            top: 8px;
+        }
+    }
+    & .trail-item {
+        font-size: 24px;
+        display: inline-block;
+        list-style: none;
+        color: $body-text-color-grey;
+        font-weight: 700;
+        margin-right: 30px;
+        font-family: $nunitosans;
+        @media #{$xs} {
+            font-size: 18px;
+        }
+        &:last-child {
+            margin-right: 0px;
+        }
+        &:hover {
+            & a {
+                color: $theme-color;
+            }
+        }
+        &.trail-begin {
+            position: relative;
+            &:before {
+                position: absolute;
+                content: '\f324';
+                font-size: 14px;
+                color: $body-text-color-grey;
+                top: 55%;
+                transform: translateY(-50%);
+                right: -25px;
+                font-family: "Font Awesome 5 Pro";
+            }
+        }
+    }
+}
+
+.breadcrumb_bg{
+    background: url(../img/slider/breadcrumb-bg-1.jpg);
+    background-repeat: no-repeat;
+}
+

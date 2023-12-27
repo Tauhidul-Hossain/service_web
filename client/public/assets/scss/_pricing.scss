@@ -1,0 +1,281 @@
+/*----------------------------------------*/
+/*  09. Pricing
+/*----------------------------------------*/
+.tp-pricing-area {
+    & .section-title-wrapper.mb-55 {
+        @media #{$xs} {
+            margin-bottom: 30px;
+        }
+    }
+}
+.tp-pricing {
+    padding: 60px 75px;
+    border-radius: 5px;
+    @media #{$xl,$md} {
+        padding: 50px 35px;
+    }
+    @media #{$xs} {
+        padding: 50px 0px;
+    }
+    &-icon {
+        height: 260px;
+        width: 260px;
+        padding: 45px;
+        display: inline-block;
+        border-radius: 50%;
+        background: #e4ede9;
+        @media #{$xs} {
+            height: 230px;
+            width: 230px;
+            padding: 30px;
+        }
+        &-inner {
+            height: 170px;
+            width: 170px;
+            line-height: 250px;
+            background: $white;
+            display: inline-block;
+            border-radius: 50%;
+            text-align: center;
+        }
+        & i {
+            color: $theme-color;
+            font-size: 100px;
+        }
+    }
+    &-list {
+        display: inline-block;
+        & ul {
+            & li {
+                font-size: 18px;
+                list-style: none;
+                margin-bottom: 15px;
+                &:last-child {
+                    margin-bottom: 0px;
+                }
+                & i {
+                    font-size: 12px;
+                    margin-right: 4px;
+                    transform: translateY(-2px);
+                }
+            }
+        }
+    }
+    &-btn {
+        & .theme-btn:hover,
+        & .theme-btn.active {
+            background: $theme-yellow;
+            color: $body-text-color;
+        }
+        & .theme-btn.active:hover {
+            background: $theme-color;
+            color: $white;
+        }
+    }
+    &:hover {
+        & .tp-pricing-icon {
+            & i {
+                animation: scale-up-one infinite 2s linear;
+            }
+        }
+    }
+}
+.tp-pricing-rate,
+.tp-pricing-list,
+.tp-pricing-btn {
+    display: inline-block;
+    text-align: left;
+    @media #{$xs} {
+        display: inherit;
+    }
+}
+.tp-pricing-list {
+    @media #{$xs} {
+        text-align: center;
+        & ul {
+            text-align: left;
+            display: inline-block;
+        }
+    }
+}
+.tp-pricing-btn {
+    @media #{$xs} {
+        text-align: center;
+    }
+}
+.tp-pricing-rate-subtitle {
+    font-size: 24px;
+}
+.tp-pricing-rate-title {
+    font-weight: 700;
+    font-family: $roboto;
+    font-size: 60px;
+    line-height: 0.5;
+    & span {
+        font-weight: 700;
+        font-size: 24px;
+    }
+}
+.tp-pricing-tabs {
+    display: inline-flex;
+    padding: 5px;
+    background: $grey-bg;
+    border-radius: 30px;
+    @media #{$xs} {
+        margin-bottom: 40px;
+    }
+    & button {
+        height: 50px;
+        line-height: 50px;
+        padding: 0px 30px;
+        background: $theme-yellow;
+        display: inline-block;
+        border-radius: 30px;
+        font-weight: 500;
+        font-size: 16px;
+        color: #09150f;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        @media #{$md} {
+            padding: 0px 22px;
+        }
+        &:last-child {
+            margin-left: 6px;
+        }
+        &.active {
+            background: $theme-color;
+            color: $white;
+        }
+    }
+}
+
+
+//pricing home two start here
+.tp-pricing-area-two {
+    & .tp-section-title-two {
+        @media #{$md} {
+            & br {
+                display: none;
+            }
+        }
+    }
+}
+.tp-pricing-two-shape {
+    height: 550px;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    background: $theme-dark-color;
+}
+.tp-pricing-tabs-two {
+    background: $white;
+}
+.tp-pricing-two {
+    padding: 20px;
+}
+.tp-pricing-two-img img {
+	width: 100%;
+}
+.tp-pricing-two-rate {
+    margin-left: 40px;
+    margin-right: 40px;
+    background: $white;
+    padding: 20px 15px;
+    text-align: center;
+    box-shadow: 0px 5px 25px 0px rgba(0, 6, 91, 0.06);
+    position: relative;
+    position: absolute;
+    top: -52px;
+    left: 0px;
+    right: 0px;
+    &.active {
+        background: $theme-yellow;
+    }
+    & h3 {
+        font-family: $roboto;
+        font-weight: 700;
+        color: $heading-color-black;
+        line-height: 1;
+        margin-bottom: 0px;
+        font-size: 45px;
+        @media #{$xs} {
+            font-size: 30px;
+        }
+        & span {
+            font-size: 24px;
+            line-height: 1;
+        }
+    }
+}
+.tp-pricing-two-btn {
+    & a {
+        padding: 0px 43px;
+        border-radius: 30px;
+        color: $heading-color-black;
+        &.theme-btn {
+            color: $white;
+            &:hover {
+                color: $heading-color-black;
+            }
+        }
+    }
+}
+.tp-pricing-two-list {
+    display: inline-block;
+    & ul {
+        text-align: left;
+        & li {
+            font-size: 18px;
+            list-style: none;
+            margin-bottom: 15px;
+            color: $body-text-color-grey;
+            &:last-child {
+                margin-bottom: 0px;
+            }
+            & i {
+                font-size: 12px;
+                margin-right: 4px;
+                transform: translateY(-2px);
+            }
+        }
+    }
+}
+.tp-pricing-cat {
+    font-size: 27px;
+    color: $heading-color-black;
+    padding-top: 70px;
+    margin-bottom: 30px;
+}
+.tp-pricing-two-content {
+    background: $white;
+    position: relative;
+}
+
+
+//pricing page start here
+.tp-pricings {
+    & .tp-pricing-icon {
+        background: #f0f1f2;
+    }
+    & .tp-pricing-rate-subtitle,
+    & .tp-pricing-rate-title {
+        color: $heading-color-black;
+    }
+    & .tp-pricing-list ul li {
+        color: $body-text-color-grey;
+    }
+    & .tp-pricing-btn .theme-btn:hover,
+    & .tp-pricing-btn .theme-btn.active {
+        color: $heading-color-black;
+    }
+    & .tp-pricing-btn .theme-btn.active:hover {
+        color: $white;
+    }
+}
+
+div#nav-tab {
+    padding: 5px;
+}

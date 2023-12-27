@@ -1,0 +1,383 @@
+/*----------------------------------------*/
+/*  05. About
+/*----------------------------------------*/
+.tp-about-text {
+    & p {
+        font-size: 20px;
+        line-height: 1.5;
+        text-align: justify;
+    }
+}
+.tp-about-service {
+    &-icon {
+        & i {
+            font-size: 52px;
+            line-height: 1;
+            color: $body-text-color;
+        }
+    }
+    &-text {
+        & p {
+            font-size: 16px;
+        }
+    }
+    &:hover {
+        & i {
+            animation-name: wobble-vertical;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: 3;
+        }
+    }
+}
+.yellow-circle-shape {
+    position: relative;
+    padding-left: 30px;
+    display: inline-block;
+    z-index: 1;
+    &::before {
+        position: absolute;
+        content: '';
+        height: 65px;
+        width: 65px;
+        border-radius: 50%;
+        background: $theme-yellow;
+        top: -6px;
+        left: 0px;
+        z-index: -1;
+    }
+}
+.tp-about-service-text-title {
+    font-size: 24px;
+    line-height: 1.41;
+    @media #{$md,$xs} {
+        font-size: 22px;
+    }
+}
+.tp-about-author {
+    display: flex;
+    align-items: center;
+    &-img {
+        margin-right: 18px;
+        & img {
+            height: 66px;
+            width: 66px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    }
+    &-text {
+        overflow: hidden;
+        & span {
+            font-size: 16px;
+            display: block;
+        }
+    }
+}
+.tp-about-author-text-title {
+    font-size: 24px;
+    margin-bottom: 0px;
+    @media #{$md,$xs} {
+        font-size: 22px;
+    }
+}
+.tp-about-number {
+    display: flex;
+    align-items: center;
+    &-icon {
+        height: 66px;
+        width: 66px;
+        text-align: center;
+        line-height: 86px;
+        background: $grey-bg;
+        margin-right: 25px;
+        @media #{$xl,$lg} {
+            margin-right: 20px;
+        }
+        & i {
+            font-size: 34px;
+            animation: phone-icon-animate 1.5s ease-in-out infinite;
+        }
+    }
+    &-text {
+        & span {
+            margin-bottom: 5px;
+            display: block;
+        }
+        & a {
+            font-size: 20px;
+            font-weight: 500;
+            display: block;
+            @media #{$xs} {
+                font-size: 18px;
+            }
+        }
+    }
+}
+.tp-about-img {
+    margin-left: -60px;
+    @media #{$xxl} {
+        margin-left: 0px;
+    }
+    @media #{$xl} {
+        margin-left: 0px;
+    }
+    @media #{$lg,$md,$xs} {
+        margin-left: 0px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    & img {
+        height: 615px;
+        width: 615px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 10px solid $white;
+        max-width: inherit;
+        @media #{$xl,$lg,$md} {
+            height: 500px;
+            width: 500px;
+        }
+        @media #{$xs} {
+            height: 280px;
+            width: 280px;
+        }
+        @media #{$sm} {
+            height: 350px;
+            width: 350px;
+        }
+    }
+}
+.tp-about-shape {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+
+// about home two start here
+.tp-about-area-two.pb-140 {
+    @media #{$xl,$lg,$md,$xs} {
+        padding-bottom: 115px;
+    }
+}
+.tp-about-text-two {
+    & p {
+        font-size: 16px;
+        color: $body-text-color-grey;
+    }
+}
+.tp-about-text-two-service-single {
+    &-icon {
+        float: left;
+        margin-right: 34px;
+        @media #{$xs} {
+            float: inherit;
+            margin-right: 0px;
+            margin-bottom: 15px;
+        }
+        @media #{$sm} {
+            float: left;
+            margin-right: 30px;
+            margin-bottom: 0px;
+        }
+        & span {
+            position: relative;
+            height: 75px;
+            width: 75px;
+            line-height: 83px;
+            display: inline-block;
+            color: $white;
+            background: $theme-color;
+            text-align: center;
+            font-size: 45px;
+            border-radius: 4px;
+            &::before {
+                position: absolute;
+                content: '';
+                height: 75px;
+                width: 75px;
+                border: 1px solid $theme-color;
+                border-radius: 5px;
+                top: -6px;
+                right: -6px;
+            }
+        }
+    }
+    & p {
+        margin-bottom: 0px;
+    }
+    &:hover {
+       & i {
+            animation: scale-up-one infinite 1.5s linear;
+        }
+    }
+}
+.tp-about-text-two-service-title {
+    font-size: 24px;
+    color: $heading-color-black;
+    &:hover {
+        color: $theme-color;
+    }
+}
+.tp-about-text-two-sign {
+    &-img {
+        width: 160px;
+        float: left;
+        margin-right: 50px;
+        @media #{$xs} {
+            margin-right: 15px;
+            width: 120px;
+        }
+        @media #{$sm} {
+            width: 140px;
+        }
+    }
+    &-text {
+        overflow: hidden;
+        & span {
+            font-size: 16px;
+            font-weight: 500;
+            color: $theme-color;
+            display: block;
+        }
+    }
+}
+.tp-about-text-two-sign-name {
+    font-size: 24px;
+    color: $heading-color-black;
+    @media #{$xs} {
+       font-size: 20px;
+    }
+    @media #{$sm} {
+        font-size: 22px;
+    }
+}
+.tp-about-img-two {
+    @media #{$xl} {
+        margin-right: 30px;
+    }
+    @media #{$lg,$md,$xs} {
+        margin-right: 0px;
+    }
+    & .img-second {
+        position: absolute;
+        right: 0px;
+        top: 205px;
+        z-index: 1;
+        border-radius: 50%;
+    }
+}
+.tp-about-text-two {
+	@media #{$md} {
+        padding-top: 150px;
+    }
+    @media #{$xs} {
+        padding-top: 170px;
+    }
+    @media #{$sm} {
+        padding-top: 150px;
+    }
+}
+.tp-about-img-two-badge {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background: $theme-yellow;
+    text-align: center;
+    height: 220px;
+    width: 110px;
+    padding-top: 30px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    & h3 {
+        font-size: 36px;
+        color: $heading-color-black;
+        line-height: 1;
+        font-family: $roboto;
+        margin-bottom: 30px;
+        overflow: hidden;
+        display: inline-block;
+    }
+    & h5 {
+        font-size: 22px;
+        color: $heading-color-black;
+        line-height: 1.2;
+        transform: rotate(90deg);
+        margin-bottom: 0px;
+        text-align: left;
+        font-family: $roboto;
+        font-weight: 500;
+    }
+}
+
+
+//about home three start here
+.tp-about-text-three {
+    & .tp-about-service-text-title {
+        color: $theme-blue;
+        &:hover {
+            color: $theme-color;
+        }
+    }
+    & .tp-about-service-icon {
+        & i {
+            color: $theme-blue;
+        }
+    }
+    & p {
+        color: $body-text-color-grey3;
+    }
+}
+.tp-about-img-three {
+    z-index: 2;
+    & .tp-about-img-three-second {
+        position: absolute;
+        top: 0px;
+        right: -30px;
+        @media #{$xl} {
+            right: 15px;
+        }
+        @media #{$xs} {
+            right: -10px;
+        }
+    }
+    & .tp-about-img-three-third {
+        position: absolute;
+        top: 0px;
+        left: -45px;
+        z-index: -1;
+    }
+}
+
+// about page start here
+.tp-about-inner-page-text {
+    & p {
+        color: $body-text-color-grey;
+    }
+    & .tp-about-service-icon i {
+        color: $heading-color-black;
+    }
+    & .tp-about-number-icon {
+        background: $theme-color;
+        & i {
+            color: $white;
+        }
+    }
+}
+.tp-abouts-img-two {
+    @media #{$lg,$md} {
+        margin-bottom: 135px;
+    }
+    @media #{$xs} {
+        margin-bottom: 165px;
+    }
+    @media #{$sm} {
+        margin-bottom: 135px;
+    }
+}
+.tp-abouts-area {
+    @media #{$lg,$md,$xs} {
+        padding-bottom: 90px;
+    }
+}

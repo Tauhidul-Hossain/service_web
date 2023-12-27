@@ -1,0 +1,25 @@
+{
+  "name": "gcnc_backend",
+  "version": "1.0.0",
+  "description": "Professional cleaning service provider.",
+  "main": "server.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon server.js",
+    "client": "cd client && npm start",
+    "build": "cd client && npm run build"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "nodemon": "^2.0.21"
+  }
+}
