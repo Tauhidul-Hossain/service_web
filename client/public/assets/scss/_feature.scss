@@ -1,0 +1,102 @@
+/*----------------------------------------*/
+/*  16. Feature
+/*----------------------------------------*/
+.tp-feature-area-two {
+    @media #{$xl} {
+        padding-bottom: 70px;
+    }
+}
+.tp-feature-area-two.pb-90 {
+    @media #{$lg,$md,$xs} {
+        padding-bottom: 65px;
+    }
+}
+.tp-feature-img {
+    @media #{$md,$xs} {
+       margin-bottom: 40px;
+    }
+    & img {
+        max-width: inherit;
+        border-radius: 4px;
+        @media #{$xl} {
+            max-width: 500px;
+        }
+        @media #{$lg} {
+            max-width: 100%;
+        }
+        @media #{$md,$xs} {
+            width: 100%;
+        }
+    }
+}
+.tp-feature {
+    &-icon {
+        & i {
+            font-size: 52px;
+            line-height: 1;
+            color: $heading-color-black;
+        }
+    }
+    & p {
+        color: $body-text-color-grey;
+        margin-bottom: 0px;
+    }
+    &:hover i {
+        animation-name: wobble-vertical;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 3;
+    }
+}
+.tp-feature-title {
+    font-size: 24px;
+    color: $heading-color-black;
+    &:hover {
+        color: $theme-color;
+    }
+}
+.tp-feature-title-desc {
+    & p {
+        color: $body-text-color-grey;
+    }
+}
+
+
+// feature home three start here
+.tp-feature-three {
+    &-icon {
+        display: inline-block;
+        position: relative;
+        & i {
+            font-size: 46px;
+            line-height: 1;
+            color: $white;
+            position: absolute;
+            top: 33%;
+            left: 33%;
+        }
+    }
+    &-text {
+        & p {
+            color: $body-text-color-grey3;
+            font-size: 16px;
+            margin-bottom: 0px;
+            padding: 0px 15px;
+            @media #{$xl} {
+                padding: 0px;
+            }
+        }
+    }
+    &:hover {
+        & i {
+            transform: rotateY(360deg);
+        }
+    }
+}
+.tp-feature-three-title {
+    font-size: 24px;
+    color: $theme-blue;
+    &:hover {
+        color: $theme-color;
+    }
+}

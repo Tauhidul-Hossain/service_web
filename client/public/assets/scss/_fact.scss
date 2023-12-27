@@ -1,0 +1,35 @@
+/*----------------------------------------*/
+/*  08. Fact
+/*----------------------------------------*/
+.tp-fact-text-title {
+    font-size: 55px;
+    line-height: 0.6;
+    @media #{$xs} {
+        font-size: 42px;
+    }
+}
+.tp-fact-text-subtitle {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: $roboto;
+    margin-bottom: 0px;
+    @media #{$xs} {
+        font-size: 16px;
+    }
+}
+.tp-fact-icon {
+    position: relative;
+    display: inline-block;
+    & i {
+        font-size: 55px;
+        color: $body-text-color;
+        position: absolute;
+        top: 31%;
+        left: 30%;
+    }
+}
+.tp-fact:hover {
+    & i {
+        animation: scale-up-one infinite 1.5s linear;
+    }
+}

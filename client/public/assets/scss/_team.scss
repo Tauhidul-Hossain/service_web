@@ -1,0 +1,121 @@
+/*----------------------------------------*/
+/*  21. Team
+/*----------------------------------------*/
+
+.tp-team-bg {
+    padding: 70px 70px 70px 70px;
+    @media #{$xs} {
+        padding: 25px 25px 20px 25px;
+    }
+    @media #{$sm,$md} {
+        padding: 70px 70px 65px 70px;
+    }
+}
+.tp-team-img {
+    float: left;
+    margin-right: 105px;
+    border: 6px solid #1820c4;
+    border-radius: 5px;
+    @media #{$xl} {
+        margin-right: 60px;
+    }
+    @media #{$lg} {
+        margin-right: 50px;
+    }
+    @media #{$md,$xs} {
+        margin-right: 0px;
+        float: none;
+    }
+    & img {
+        height: 530px;
+        width: 470px;
+        object-fit: cover;
+        @media #{$lg} {
+            width: 350px;
+        }
+        @media #{$md,$xs} {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+.tp-team-text {
+    @media #{$xl} {
+        padding-top: 15px;
+    }
+    & p {
+        color: $white;
+    }
+    & ul {
+        & li,
+        & li a {
+            list-style: none;
+            color: $white;
+            font-size: 20px;
+            font-weight: 800;
+            @media #{$xs} {
+                font-size: 16px;
+            }
+            & i {
+                font-size: 24px;
+                width: 40px;
+                display: inline-block;
+                line-height: 1;
+                transform: translateY(2px);
+                color: $theme-yellow;
+                @media #{$xs} {
+                    font-size: 20px;
+                    width: 25px;
+                }
+            }
+        }
+        & li {
+            margin-bottom: 30px;
+            &:last-child {
+                margin-bottom: 0px;
+            }
+        }
+    }
+}
+.tp-team-subtitle {
+    color: $theme-yellow;
+    font-size: 24px;
+}
+.tp-team-social {
+    & a {
+        background: none;
+        border: 2px solid #669966;
+        border-radius: 0px;
+        height: 45px;
+        width: 45px;
+        line-height: 41px;
+        &:hover {
+            border-color: $theme-color;
+        }
+    }
+}
+.tp-team-progress {
+    & p {
+        color: $body-text-color-grey;
+    }
+}
+
+.tp-team-fact {
+    & .tp-fact-text-subtitle {
+        color: $body-text-color-grey;
+    }
+}
+.tp-team-progress-area {
+    @media #{$xl} {
+        padding-bottom: 80px;
+    }
+    @media #{$lg} {
+        padding-bottom: 70px;
+    }
+    @media #{$md,$xs} {
+        padding-bottom: 75px;
+    }
+}
+.team_details_social a:hover .icon{
+    color: white;
+}

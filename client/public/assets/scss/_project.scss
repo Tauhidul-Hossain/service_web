@@ -1,0 +1,288 @@
+/*----------------------------------------*/
+/*  11. Project
+/*----------------------------------------*/
+.tp-project-shape {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    background: $white;
+    height: 110px;
+}
+.tp-project-subtitle {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    display: block;
+    @include transition(0.3s);
+}
+.tp-project-title {
+    font-size: 24px;
+    margin-bottom: 0px;
+    @include transition(0.3s);
+    @media #{$md} {
+        font-size: 22px;
+    }
+}
+.tp-project-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $white;
+    padding: 35px 40px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-radius: 3px;
+    box-shadow: 0px 5px 25px 0px rgba(0, 6, 91, 0.08);
+    margin-top: -50px;
+    position: relative;
+    @include transition(0.3s);
+    @media #{$xl} {
+        padding: 30px 30px;
+    }
+    @media #{$lg,$md,$xs} {
+        padding: 30px 25px;
+    }
+    &-icon {
+        & a {
+            height: 60px;
+            width: 60px;
+            line-height: 60px;
+            border-radius: 50%;
+            color: $white;
+            display: inline-block;
+            background: $theme-color;
+            text-align: center;
+            font-size: 20px;
+            @include transition(0.3s);
+            @media #{$xl,$lg,$md,$xs} {
+                height: 40px;
+                width: 40px;
+                line-height: 40px;
+                font-size: 18px;
+            }
+        }
+    }
+}
+.tp-project-img {
+    overflow: hidden;
+    & img {
+        width: 100%;
+        border-radius: 4px;
+    }
+}
+.tp-project {
+    &:hover {
+        & .tp-project-subtitle,
+        & .tp-project-title {
+            color: $white !important;
+        }
+        & .tp-project-text {
+            background: $theme-color;
+        }
+        & .tp-project-text-icon a {
+            background: $theme-yellow;
+            color: $heading-color-black;
+        }
+        & img {
+            transform: scale3d(1.1, 1.1, 1.1);
+        }
+    }
+}
+// project home three start here
+.tp-project-title-btn {
+    & a {
+        color: $theme-blue;
+        &:hover {
+            color: $white;
+        }
+    }
+}
+.tp-project-title-wrapper h2 {
+    font-size: 54px;
+    @media #{$xl} {
+        font-size: 45px;
+    }
+    @media #{$lg,$md} {
+        font-size: 36px;
+    }
+    @media #{$xs} {
+        font-size: 32px;
+    }
+}
+.tp-project-three {
+    &-img {
+        position: relative;
+        & img {
+            width: 100%;
+            @media #{$xs} {
+                min-height: 290px;
+                object-fit: cover;
+            }
+        }
+        &-overlay {
+            background-color: rgba(254, 209, 12, 0.8);
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0px;
+            left: 0px;
+            transform: scale(0);
+            @include transition(0.3s);
+            &-text {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                text-align: center;
+                width: 100%;
+                &-icon {
+                    margin-bottom: 28px;
+                    & a {
+                        height: 64px;
+                        width: 64px;
+                        display: inline-block;
+                        background: $theme-blue;
+                        color: $white;
+                        font-size: 20px;
+                        text-align: center;
+                        border-radius: 50%;
+                        line-height: 64px;
+                        &:hover {
+                            background: $theme-color;
+                        }
+                    }
+                }
+            }
+            & span {
+                font-size: 16px;
+                font-weight: 500;
+                display: block;
+                color: $theme-blue;
+            }
+        }
+    }
+    &:hover {
+        & .tp-project-three-img-overlay {
+            transform: scale(0.9);
+        }
+    }
+}
+.tp-project-three-img-overlay-title {
+    font-size: 24px;
+    color: $theme-blue;
+    &:hover {
+        color: $theme-color;
+    }
+}
+.tp-project-title-btn {
+    @media #{$xs} {
+        margin-bottom: 25px;
+    }
+}
+
+
+//project page start here
+.tp-prjects-tab-menu {
+    & .nav-item {
+        margin: 0px 6px;
+        @media #{$xs} {
+            margin: 0px 4px;
+        }
+    }
+    & .nav-link {
+        border: 1px solid rgb(222, 224, 226);
+        height: 50px;
+        line-height: 48px;
+        padding: 0px 30px;
+        border-radius: 50px;
+        background: none;
+        color: $heading-color-black;
+        outline: none;
+        cursor: pointer;
+        display: inline-block;
+        font-weight: 500;
+        font-family: $roboto;
+        @media #{$md} {
+            padding: 0px 25px;
+        }
+        @media #{$xs} {
+            padding: 0px 17px;
+            height: 40px;
+            line-height: 38px;
+            font-size: 15px;
+            margin-bottom: 5px;
+        }
+        &.active {
+            background: $theme-color;
+            color: $white;
+            border-color: $theme-color;
+        }
+    }
+}
+.tp-prjects-tab-content {
+    & .tp-project-text {
+        padding: 35px 30px;
+        position: static;
+        margin-top: -55px;
+        z-index: 3;
+        @media #{$xl,$lg,$md,$xs} {
+            padding: 30px 20px;
+        }
+    }
+    & .tp-project-img {
+        position: relative;
+        z-index: -1;
+        & img {
+            width: 100%;
+        }
+    }
+    & .tp-project-subtitle {
+        color: $body-text-color-grey;
+    }
+    & .tp-project-title {
+        color: $heading-color-black;
+        @media #{$xl} {
+            font-size: 22px;
+        }
+    }
+}
+
+
+//project details start here
+
+.tp-faqs-left-sidebar {
+    & ul {
+        & li {
+            font-weight: 500;
+            color: $heading-color-black;
+            font-size: 18px;
+            & span {
+                font-weight: 400;
+                color: $body-text-color-grey;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+.tp-newsletter-area-three-bg{
+    background: url(../img/blog/newsletter-bg.jpg);
+    background-repeat: no-repeat;
+}
+.tp-project-three-img-overlay-text-icon span {
+    height: 64px;
+    width: 64px;
+    display: inline-block;
+    background: #102579;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 64px;
+    cursor: pointer;
+}
+.tp-project-three-img-overlay-text-icon span:hover {
+    background: #20215f;
+}
